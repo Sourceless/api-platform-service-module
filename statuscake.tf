@@ -4,7 +4,7 @@ provider "statuscake" {
 }
 
 locals {
-  website_name = "${var.apigee_environment}.api.service.nhs.uk"
+  website_name = "https://${var.apigee_environment}.api.service.nhs.uk"
   ping_url = "${local.website_name}/${var.path}/_ping"
   status_url = "${local.website_name}/${var.path}/_status"
 }
