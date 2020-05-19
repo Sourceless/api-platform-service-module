@@ -1,6 +1,7 @@
 provider "statuscake" {
   username = var.status_cake_username
   apikey = var.status_cake_api_key
+  version = "1.0.0"
 }
 
 locals {
