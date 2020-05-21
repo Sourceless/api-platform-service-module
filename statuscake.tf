@@ -17,6 +17,8 @@ resource "statuscake_test" "ping" {
   test_type    = "HTTP"
   check_rate   = 300
   contact_group   = [var.status_cake_contact_group]
+  # Only deploy if namespace is empty. i.e don't create alerts for namespaced deployments
+  count = length(var.namespace) > 0 ? 0 : 1
 }
 
 resource "statuscake_test" "status" {
@@ -25,4 +27,6 @@ resource "statuscake_test" "status" {
   test_type    = "HTTP"
   check_rate   = 300
   contact_group   = [var.status_cake_contact_group]
+  # Only deploy if namespace is empty. i.e don't create alerts for namespaced deployments
+  count = length(var.namespace) > 0 ? 0 : 1
 }
