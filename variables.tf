@@ -69,3 +69,8 @@ variable "status_cake_contact_group" {
   type = string
   description = "Statuscake Contact Group for monitoring and alerting"
 }
+
+variable "status_cake_status_apikey" {
+  type = string
+  description = "Apikey for the _status endpoint"
+}
