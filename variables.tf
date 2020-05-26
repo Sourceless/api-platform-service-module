@@ -37,6 +37,7 @@ variable "proxy_type" {
 
 variable "namespace" {
   type = string
+  default = ""
   description = "String appended to the end of proxy and product names to allow namespaced deploys, for PRs and such"
 }
 
